@@ -1,6 +1,6 @@
 {
   "name": "plaid-client",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "Node Plaid API client",
   "main": "dist/umd/plaidClient.js",
   "module": "dist/mjs/plaidClient.mjs",
