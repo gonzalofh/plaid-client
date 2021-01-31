@@ -1,6 +1,6 @@
 'use strict';
 
-import axios from 'axios'
+import axios from 'axios';
 
 const host = process.env("PLAID_HOST");
 const clientId = process.env("PLAID_CLIENT_ID");
