@@ -2,11 +2,7 @@
 
 import axios from 'axios';
 
-const host = process.env["PLAID_HOST"];
-const clientId = process.env["PLAID_CLIENT_ID"];
-const secretKey = process.env["PLAID_SECRET_KEY"];
-
-exports.getAccount = (accessToken, responseType) => {
+exports.getAccount = (accessToken, clientId, secretKey, responseType) => {
 	return axios({
 		method: 'post',
 		url: host + '/accounts/get',
@@ -17,4 +13,4 @@ exports.getAccount = (accessToken, responseType) => {
 			'secret': secretKey
 		}
 	})
-}  
+}
