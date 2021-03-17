@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-exports.default = class PlaidClient {
+module.exports = class PlaidClient {
 	
 	constructor(host, clientId, secretKey) {
 		this.host = host;
