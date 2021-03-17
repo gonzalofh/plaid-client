@@ -4,7 +4,8 @@ import axios from 'axios';
 
 exports.default = class PlaidClient {
 	
-	constructor(clientId, secretKey) {
+	constructor(host, clientId, secretKey) {
+		this.host = host;
 		this.clientId = clientId;
 		this.secretKey = secretKey;
 	}
@@ -12,7 +13,7 @@ exports.default = class PlaidClient {
 	getAccount(accessToken=null, responseType=null) {
 		return axios({
 			method: 'post',
-			url: host + '/accounts/get',
+			url: this.host + '/accounts/get',
 			responseType: responseType,
 			data: {
 				'access_token': accessToken,
@@ -21,4 +22,5 @@ exports.default = class PlaidClient {
 			}
 		})
 	}
+
 }
